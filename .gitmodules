@@ -1,3 +1,4 @@
 [submodule "libuv"]
 	path = libuv
-	url = git://github.com/joyent/libuv.git
+	url = git://github.com/libuv/libuv.git
+	branch = v1.x

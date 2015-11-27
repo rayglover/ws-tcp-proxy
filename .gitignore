@@ -12,5 +12,5 @@ build/
 core
 tags
 *.o
-libuv*
+
 ws_proxy
