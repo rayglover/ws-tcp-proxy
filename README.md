@@ -6,8 +6,13 @@ This is a simple Websocket to TCP proxy, built on libuv.
 Building
 -----
 
-    $ git clone --recursive git@github.com:edwardchoh/ws-tcp-proxy.git
+## Clone the repository (and submodules)
+
+    $ git clone --recursive <git url>
     $ cd ws-tcp-proxy
+
+## Make
+
     $ make
 
 On Mac, use MacOSX/ws-tcp-proxy.xcodeproj
