@@ -6,12 +6,12 @@ This is a simple Websocket to TCP proxy, built on libuv.
 Building
 -----
 
-### Clone the repository (and submodules)
+#### Clone (with submodules)
 
     $ git clone --recursive <git url>
     $ cd ws-tcp-proxy
 
-### Build
+#### Build
 
     $ ./libuv/autogen.sh
     $ ./libuv/configure
@@ -29,17 +29,17 @@ The server accepts the following arguments:
 ## Simple Example
 Using netcat, we can simulate a basic request/reponse using the proxy.
 
-### Terminal 1 (proxy)
+#### Terminal 1 (proxy)
 Start the proxy:
 
     $ ./ws-tcp-proxy --local 0.0.0.0:8080 --remote 127.0.0.1:5000
 
-### Terminal 2 (tcp server)
+#### Terminal 2 (tcp server)
 Start the TCP server, which on successful connection to the proxy, will reply with the date.
 
     $ while true ; do date  | nc -l -p 5000 ; done
 
-### Terminal 3 (ws-client)
+#### Terminal 3 (ws-client)
 Make a HTTP request with websocket upgrade.
 
     $ echo -e 'GET /?encoding=text HTTP/1.1\nOrigin: http://www.websocket.org\nConnection: Upgrade\nHost: echo.websocket.org\nUpgrade: websocket\n' | nc -C -q 5 localhost 8080
